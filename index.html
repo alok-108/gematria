@@ -2,50 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kabbalistic Gematria</title>
+  <title>Kabbalistic Gematria, Transliteration & Dream Interpretation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fast, responsive site for Kabbalistic Gematria calculations, transliteration, and comprehensive dream interpretation.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <h1>Kabbalistic Gematria Calculator</h1>
-    <nav>
-      <a href="#calculator">Calculator</a>
-      <a href="#letters">Letter Values</a>
-      <a href="#about">About</a>
-    </nav>
+    <div class="container">
+      <h1>Kabbalistic Gematria, Transliteration & Dream Interpretation</h1>
+      <nav>
+        <a href="#calculator">Calculator</a>
+        <a href="#letters">Letter Values</a>
+        <a href="#transliteration">Transliteration</a>
+        <a href="#dream">Dream Interpretation</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="calculator">
-    <h2>Gematria Calculator</h2>
-    <p>Enter a Hebrew word to find its numeric value:</p>
-    <input type="text" id="hebrewInput" placeholder="e.g. שלום">
-    <button onclick="calculateGematria()">Calculate</button>
-    <div id="result"></div>
-  </section>
+  <main class="container">
+    <!-- Gematria Calculator Section -->
+    <section id="calculator">
+      <h2>Gematria Calculator</h2>
+      <p>Enter a Hebrew word to find its numeric value:</p>
+      <div class="input-group">
+        <input type="text" id="hebrewInput" placeholder="e.g. שלום">
+        <button id="calcBtn">Calculate</button>
+      </div>
+      <div id="result" aria-live="polite"></div>
+    </section>
 
-  <section id="letters">
-    <h2>Hebrew Letters & Values</h2>
-    <div id="letterTable"></div>
-  </section>
+    <!-- Hebrew Letters Section -->
+    <section id="letters">
+      <h2>Hebrew Letters & Values</h2>
+      <div id="letterTable" class="letter-grid"></div>
+    </section>
 
-  <section id="about">
-    <h2>What is Kabbalistic Numerology?</h2>
-    <p>
-      Kabbalistic numerology (Gematria) is the mystical interpretation of Hebrew letters and words based on their numerical values. 
-      Each Hebrew letter has a specific value, and words with the same values are thought to have hidden spiritual connections.
-    </p>
-    <p>
-      This system is used in Kabbalah to uncover deeper meanings in the Torah, enhance meditation, and explore the divine.
-    </p>
-  </section>
+    <!-- Transliteration Section -->
+    <section id="transliteration">
+      <h2>Transliteration Converter</h2>
+      <div class="converter">
+        <div class="converter-section">
+          <h3>Hebrew to English</h3>
+          <input type="text" id="hebToEngInput" placeholder="Enter Hebrew text">
+          <button id="hebToEngBtn">Convert to English</button>
+          <div id="hebToEngResult" aria-live="polite"></div>
+        </div>
+        <div class="converter-section">
+          <h3>English to Hebrew</h3>
+          <input type="text" id="engToHebInput" placeholder="Enter English text">
+          <button id="engToHebBtn">Convert to Hebrew</button>
+          <div id="engToHebResult" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dream Interpretation Section -->
+    <section id="dream">
+      <h2>Dream Interpretation</h2>
+      <p>Describe your dream below for a comprehensive Kabbalistic interpretation:</p>
+      <div class="input-group">
+        <textarea id="dreamInput" placeholder="e.g. I was flying over a vast ocean..." rows="4"></textarea>
+      </div>
+      <div class="input-group">
+        <button id="dreamBtn">Interpret Dream</button>
+      </div>
+      <div id="dreamResult" aria-live="polite"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>What is Kabbalistic Numerology?</h2>
+      <p>
+        Kabbalistic numerology (Gematria) is the mystical interpretation of Hebrew letters and words based on their numerical values. Each Hebrew letter carries a specific value, and words with matching totals are believed to be interconnected spiritually.
+      </p>
+      <p>
+        This system is used in Kabbalah to uncover deeper meanings in the Torah, enhance meditation practices, and explore the divine.
+      </p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Kabbalah Gematria Project</p>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+  <!-- Scripts loaded at the end with "defer" for improved performance -->
+  <script src="data.js" defer></script>
+  <script src="dream.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
