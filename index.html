@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kabbalistic Gematria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Kabbalistic Gematria Calculator</h1>
+    <nav>
+      <a href="#calculator">Calculator</a>
+      <a href="#letters">Letter Values</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section id="calculator">
+    <h2>Gematria Calculator</h2>
+    <p>Enter a Hebrew word to find its numeric value:</p>
+    <input type="text" id="hebrewInput" placeholder="e.g. שלום">
+    <button onclick="calculateGematria()">Calculate</button>
+    <div id="result"></div>
+  </section>
+
+  <section id="letters">
+    <h2>Hebrew Letters & Values</h2>
+    <div id="letterTable"></div>
+  </section>
+
+  <section id="about">
+    <h2>What is Kabbalistic Numerology?</h2>
+    <p>
+      Kabbalistic numerology (Gematria) is the mystical interpretation of Hebrew letters and words based on their numerical values. 
+      Each Hebrew letter has a specific value, and words with the same values are thought to have hidden spiritual connections.
+    </p>
+    <p>
+      This system is used in Kabbalah to uncover deeper meanings in the Torah, enhance meditation, and explore the divine.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kabbalah Gematria Project</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
